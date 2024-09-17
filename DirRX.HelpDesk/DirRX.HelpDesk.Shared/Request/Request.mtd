@@ -1,10 +1,10 @@
 {
   "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
-  "NameGuid": "777801d5-52c2-4f93-8d21-6bdfd81dd813",
-  "Name": "TypeRequest",
+  "NameGuid": "e5c19259-bdfb-4502-8927-186748a3dfd9",
+  "Name": "Request",
   "BaseGuid": "04581d26-0780-4cfd-b3cd-c2cafc5798b0",
   "CanBeNavigationPropertyType": true,
-  "Code": "TypeRequest",
+  "Code": "Request",
   "CreationAreaMetadata": {
     "NameGuid": "f7766750-eee2-4fcd-8003-5c06a90d1f44",
     "Name": "CreationArea",
@@ -21,23 +21,23 @@
   "Forms": [
     {
       "$type": "Sungero.Metadata.StandaloneFormMetadata, Sungero.Metadata",
-      "NameGuid": "9a9c4028-dce0-4d24-9e7d-e208d656e57c",
+      "NameGuid": "44444f51-7fe0-48c8-8563-4faa8e50ffbe",
       "Name": "Card",
       "Controls": [
         {
           "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
-          "NameGuid": "ffd90a25-e991-4b21-a0b2-c69687cd1633",
+          "NameGuid": "af6f8479-3aa7-47aa-8c48-c811edd1a32f",
           "Name": "ControlGroup"
         },
         {
           "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
-          "NameGuid": "33b7a894-87ae-43a2-a51c-807e23a677a7",
+          "NameGuid": "de166cbd-fce0-4622-a3f7-2e14df5c58eb",
           "Name": "Control",
           "ColumnNumber": 0,
           "ColumnSpan": 1,
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
-          "ParentGuid": "ffd90a25-e991-4b21-a0b2-c69687cd1633",
-          "PropertyGuid": "749bf7eb-a948-4e28-862b-efe28518a299",
+          "ParentGuid": "af6f8479-3aa7-47aa-8c48-c811edd1a32f",
+          "PropertyGuid": "e1c211e7-9d28-4438-a1ce-00287bbcf03c",
           "RowNumber": 0,
           "RowSpan": 1,
           "Settings": []
@@ -46,11 +46,13 @@
     }
   ],
   "IconResourcesKeys": [],
+  "IntegrationServiceName": "HelpDeskRequest",
+  "IsAbstract": true,
   "OperationsClass": "",
   "Properties": [
     {
       "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
-      "NameGuid": "749bf7eb-a948-4e28-862b-efe28518a299",
+      "NameGuid": "e1c211e7-9d28-4438-a1ce-00287bbcf03c",
       "Name": "Name",
       "Code": "Name",
       "IsDisplayValue": true,
@@ -59,18 +61,48 @@
       "PreviousPropertyGuid": "1dcedc29-5140-4770-ac92-eabc212326a1"
     },
     {
+      "$type": "Sungero.Metadata.IntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "080f7b92-9d2a-45f6-8735-a07a2ad1a399",
+      "Name": "Number",
+      "Code": "Number",
+      "IsRequired": true,
+      "IsUnique": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "e1c211e7-9d28-4438-a1ce-00287bbcf03c"
+    },
+    {
       "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
-      "NameGuid": "697b9df1-f3b9-43ab-a7cb-cebb3b61c635",
-      "Name": "Note",
-      "Code": "Note",
+      "NameGuid": "10ed4377-5e0b-41dc-910a-a16abe54e615",
+      "Name": "Description",
+      "Code": "Description",
+      "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
-      "PreviousPropertyGuid": "749bf7eb-a948-4e28-862b-efe28518a299"
+      "PreviousPropertyGuid": "080f7b92-9d2a-45f6-8735-a07a2ad1a399"
+    },
+    {
+      "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "ea892d4e-3199-4dfb-8c41-88bccc2b9f57",
+      "Name": "CreatedDate",
+      "Code": "CreatedDate",
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+      "PreviousPropertyGuid": "10ed4377-5e0b-41dc-910a-a16abe54e615"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "c70872da-eafd-4b96-85ee-6f733314b009",
+      "Name": "Responsible",
+      "Code": "Responsible",
+      "EntityGuid": "b7905516-2be5-4931-961c-cb38d5677565",
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "ea892d4e-3199-4dfb-8c41-88bccc2b9f57"
     }
   ],
   "PublicStructures": [],
   "ResourcesKeys": [],
   "RibbonCardMetadata": {
-    "NameGuid": "034243f4-1f2d-478b-992a-2746ec1b4457",
+    "NameGuid": "27e0ca9a-9651-4fd7-ae6b-d7a4a676b9ce",
     "Name": "RibbonCard",
     "Categories": [],
     "Elements": [],
@@ -80,7 +112,7 @@
     "RibbonKind": "Card"
   },
   "RibbonCollectionMetadata": {
-    "NameGuid": "8362a470-a7b3-4ff7-b212-1b6e2c0fae04",
+    "NameGuid": "7128b2f1-52fb-44ec-9326-c2d02e9946ab",
     "Name": "RibbonCollection",
     "Categories": [],
     "Elements": [],
